@@ -1,13 +1,5 @@
 ExUnit.start()
 
-defmodule LiveMessageTest.Router do
-  use Phoenix.Router
-
-  pipeline :browser do
-    plug(:fetch_session)
-  end
-end
-
 defmodule LiveMessageTest.ErrorView do
   def render(template, _assigns) do
     Phoenix.Controller.status_message_from_template(template)
@@ -30,8 +22,6 @@ defmodule LiveMessageTest.Endpoint do
     key: "_live_view_key",
     signing_salt: "/VEDsdfsffMnp5"
   )
-
-  plug(LiveMessageTest.Router)
 end
 
 Supervisor.start_link([LiveMessageTest.Endpoint], strategy: :one_for_one)
