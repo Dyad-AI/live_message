@@ -1,4 +1,4 @@
-![Tests](https://github.com/Dyad-AI/live_message/actions/workflows/test.yml/badge.svg)
+![Tests](https://github.com/Dyad-AI/live_message/actions/workflows/tests.yml/badge.svg)
 
 # LiveMessage
 
@@ -35,7 +35,7 @@ The "target" here is the ID of the LiveView or LiveComponent available though th
 />
 ```
 
-Think of `@me` as a `@myself` but for live messaging.
+Think of `@me` like `@myself` but for live messaging.
 
 ## Installation
 
