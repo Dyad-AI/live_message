@@ -116,10 +116,6 @@ defmodule LiveMessageTest do
           """
         end
 
-        def update(assigns, socket) do
-          {:ok, assign(socket, target: assigns.target)}
-        end
-
         def handle_event("send", _, socket) do
           send_info(socket.assigns.target, :the_message)
 
@@ -136,9 +132,13 @@ defmodule LiveMessageTest do
           ~H"""
           <div>
             <.live_component module={SubComponent} target={@me} id="the_sub_component" />
-            <%= assigns[:result] %>
+            <%= @update_called && assigns[:result] %>
           </div>
           """
+        end
+
+        def update(_assigns, socket) do
+          {:ok, assign(socket, update_called: true)}
         end
 
         def handle_info(:the_message, socket) do
