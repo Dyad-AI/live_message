@@ -1,11 +1,11 @@
-![CI](https://github.com/Dyad-AI/live_message/actions/workflows/ci.yml/badge.svg) [![Hex.pm](https://img.shields.io/hexpm/v/live_message.svg)](https://hex.pm/packages/live_message) [![Documentation](https://img.shields.io/badge/documentation-gray)](https://hexdocs.pm/live_message/)
-
 LiveMessage
 ===========
 
+![CI](https://github.com/Dyad-AI/live_message/actions/workflows/ci.yml/badge.svg) [![Hex.pm](https://img.shields.io/hexpm/v/live_message.svg)](https://hex.pm/packages/live_message) [![Documentation](https://img.shields.io/badge/documentation-gray)](https://hexdocs.pm/live_message/)
+
 Unified messaging for LiveViews and LiveComponents, to allow for simple decomposition of LiveViews into LiveComponents.
 
-# Usage
+### Usage
 
 From any LiveView or LiveComponent you can:
 
@@ -38,7 +38,7 @@ The "target" here is the ID of the LiveView or LiveComponent available though th
 
 Think of `@me` like `@myself` but for live messaging.
 
-# Installation
+### Installation
 
 The package can be installed by adding `live_message` to your list of dependencies in `mix.exs`:
 
