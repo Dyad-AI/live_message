@@ -1,17 +1,20 @@
 defmodule LiveMessage.MixProject do
   use Mix.Project
 
+  @description """
+  Unified messaging for LiveViews and LiveComponents
+  """
+
   def project do
     [
       app: :live_message,
-      version: "0.1.0",
+      version: "0.1.1",
       elixir: "~> 1.14",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
       package: package(),
-      description: """
-      Unified messaging for LiveViews and LiveComponents
-      """
+      description: @description,
+      docs: [extras: ["README.md"]]
     ]
   end
 
