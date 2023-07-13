@@ -1,4 +1,4 @@
-![CI](https://github.com/Dyad-AI/live_message/actions/workflows/tests.yml/ci.svg) [![Hex.pm](https://img.shields.io/hexpm/v/live_message.svg)](https://hex.pm/packages/live_message) [![Documentation](https://img.shields.io/badge/documentation-gray)](https://hexdocs.pm/live_message/)
+![CI](https://github.com/Dyad-AI/live_message/actions/workflows/ci.yml/badge.svg) [![Hex.pm](https://img.shields.io/hexpm/v/live_message.svg)](https://hex.pm/packages/live_message) [![Documentation](https://img.shields.io/badge/documentation-gray)](https://hexdocs.pm/live_message/)
 
 # LiveMessage
 
