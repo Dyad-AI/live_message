@@ -1,7 +1,7 @@
-defmodule MailroomWeb.LiveMessaging.SendFunctions do
+defmodule LiveMessage.SendFunctions do
   alias Phoenix.LiveView
-  alias MailroomWeb.LiveMessaging.Id.LiveViewId
-  alias MailroomWeb.LiveMessaging.Id.LiveComponentId
+  alias LiveMessage.Id.LiveViewId
+  alias LiveMessage.Id.LiveComponentId
 
   def send_info(LiveViewId, message) do
     send(self(), message)

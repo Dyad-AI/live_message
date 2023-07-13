@@ -1,17 +1,17 @@
-defmodule MailroomWeb.LiveMessaging.LiveComponent do
+defmodule LiveMessage.LiveComponent do
   # Decorates a LiveComponent's `update/2` function to allow for:
   #   - live messages to be intercepted and sent to `handle_info/2`
   #   - the component ID to be set assigned to `@me` to be used as a target for messages
 
   defmacro __using__(_opts) do
     quote do
-      import MailroomWeb.LiveMessaging.SendFunctions
-      require MailroomWeb.LiveMessaging.LiveComponent
+      import LiveMessage.SendFunctions
+      require LiveMessage.LiveComponent
 
       @has_update_function false
 
-      @on_definition MailroomWeb.LiveMessaging.LiveComponent
-      @before_compile MailroomWeb.LiveMessaging.LiveComponent
+      @on_definition LiveMessage.LiveComponent
+      @before_compile LiveMessage.LiveComponent
     end
   end
 
@@ -27,7 +27,7 @@ defmodule MailroomWeb.LiveMessaging.LiveComponent do
         defoverridable update: 2
 
         def update(assigns, socket) do
-          MailroomWeb.LiveMessaging.LiveComponent.update_decorator(
+          LiveMessage.LiveComponent.update_decorator(
             __MODULE__,
             assigns,
             socket,
@@ -36,11 +36,11 @@ defmodule MailroomWeb.LiveMessaging.LiveComponent do
         end
       else
         def update(assigns, socket) do
-          MailroomWeb.LiveMessaging.LiveComponent.update_decorator(
+          LiveMessage.LiveComponent.update_decorator(
             __MODULE__,
             assigns,
             socket,
-            %{update: &MailroomWeb.LiveMessaging.LiveComponent.default_update/2, module: __MODULE__}
+            %{update: &LiveMessage.LiveComponent.default_update/2, module: __MODULE__}
           )
         end
       end
@@ -48,7 +48,7 @@ defmodule MailroomWeb.LiveMessaging.LiveComponent do
   end
 
   import Phoenix.Component, only: [assign: 2]
-  alias MailroomWeb.LiveMessaging.Id
+  alias LiveMessage.Id
 
   def default_update(assigns, socket) do
     {:ok, assign(socket, assigns)}

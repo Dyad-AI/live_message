@@ -1,13 +1,13 @@
-defmodule MailroomWeb.LiveMessaging.LiveView do
+defmodule LiveMessage.LiveView do
   defmacro __using__(_opts) do
     quote do
-      import MailroomWeb.LiveMessaging.SendFunctions
-      on_mount(MailroomWeb.LiveMessaging.LiveView)
+      import LiveMessage.SendFunctions
+      on_mount(LiveMessage.LiveView)
     end
   end
 
   import Phoenix.Component
-  alias MailroomWeb.LiveMessaging.Id
+  alias LiveMessage.Id
 
   def on_mount(:default, _params, _session, socket) do
     {:cont, assign(socket, me: Id.for_live_view())}

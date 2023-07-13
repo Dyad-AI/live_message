@@ -1,6 +1,6 @@
-defmodule MailroomWeb.LiveMessaging.Id do
-  alias MailroomWeb.LiveMessaging.Id.LiveViewId
-  alias MailroomWeb.LiveMessaging.Id.LiveComponentId
+defmodule LiveMessage.Id do
+  alias LiveMessage.Id.LiveViewId
+  alias LiveMessage.Id.LiveComponentId
 
   defmodule LiveComponentId do
     defstruct [:module, :id]

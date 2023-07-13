@@ -23,7 +23,7 @@ Next, add the following imports to your web file in `lib/my_app_web.ex`:
 def live_view do
   quote do
     use Phoenix.LiveView
-    use LiveMessaging.LiveView
+    use LiveMessage.LiveView
     # ...
   end
 end
