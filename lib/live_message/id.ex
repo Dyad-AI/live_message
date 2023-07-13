@@ -6,6 +6,10 @@ defmodule LiveMessage.Id do
     defstruct [:module, :id]
   end
 
-  def for_live_view, do: LiveViewId
+  defmodule LiveViewId do
+    defstruct []
+  end
+
+  def for_live_view, do: %LiveViewId{}
   def for_component(module, component_id), do: %LiveComponentId{module: module, id: component_id}
 end
