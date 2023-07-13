@@ -8,6 +8,7 @@ defmodule LiveMessage.MixProject do
       elixir: "~> 1.14",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
+      package: package(),
       description: """
       Unified messaging for LiveViews and LiveComponents
       """
@@ -24,6 +25,14 @@ defmodule LiveMessage.MixProject do
     [
       {:phoenix_live_view, "~> 0.18.3"},
       {:floki, ">= 0.30.0", only: :test}
+    ]
+  end
+
+  defp package() do
+    [
+      files: ~w(lib .formatter.exs mix.exs README.md src),
+      licenses: ["Apache-2.0"],
+      links: %{"GitHub" => "https://github.com/Dyad-AI/live_message"}
     ]
   end
 end
