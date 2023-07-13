@@ -30,7 +30,7 @@ defmodule LiveMessage.MixProject do
 
   defp package() do
     [
-      files: ~w(lib .formatter.exs mix.exs README.md src),
+      files: ~w(lib .formatter.exs mix.exs README.md),
       licenses: ["Apache-2.0"],
       links: %{"GitHub" => "https://github.com/Dyad-AI/live_message"}
     ]
