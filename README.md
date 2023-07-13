@@ -1,3 +1,5 @@
+![Tests](https://github.com/Dyad-AI/live_message/actions/workflows/test.yml/badge.svg)
+
 # LiveMessage
 
 Add unified messaging for LiveViews and LiveComponents, to allow for simple decomposition of LiveViews into LiveComponents.
