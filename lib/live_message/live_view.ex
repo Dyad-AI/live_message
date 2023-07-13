@@ -1,4 +1,8 @@
 defmodule LiveMessage.LiveView do
+  @moduledoc ~S"""
+  When a LiveView has `use LiveMessage.LiveView` it will have a `@me` assign that can be used as a target for `send_info/2` and `send_info_after/3`
+  """
+
   defmacro __using__(_opts) do
     quote do
       import LiveMessage.SendFunctions

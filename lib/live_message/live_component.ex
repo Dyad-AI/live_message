@@ -1,4 +1,10 @@
 defmodule LiveMessage.LiveComponent do
+  @moduledoc ~S"""
+  When a LiveComponent has `use LiveMessage.LiveComponent` it will have a `@me` assign that can be used as a target for `send_info/2` and `send_info_after/3`
+
+  This will also allow the LiveComponent to receive messages in `handle_info/3`
+  """
+
   # Decorates a LiveComponent's `update/2` function to allow for:
   #   - live messages to be intercepted and sent to `handle_info/2`
   #   - the component ID to be set assigned to `@me` to be used as a target for messages
@@ -24,6 +30,9 @@ defmodule LiveMessage.LiveComponent do
   defmacro __before_compile__(_env) do
     quote do
       if @has_update_function do
+        # The LiveComponent has `update/2` defined so override it with another update function
+        # that decorates the underlying (super) `update/2`
+
         defoverridable update: 2
 
         def update(assigns, socket) do
@@ -35,6 +44,9 @@ defmodule LiveMessage.LiveComponent do
           )
         end
       else
+        # The LiveComponent does not have `update/2` defined so add one which
+        # decorates `default_update/2` (what happens in a LiveComponent when no `update/2` is specified)
+
         def update(assigns, socket) do
           LiveMessage.LiveComponent.update_decorator(
             __MODULE__,

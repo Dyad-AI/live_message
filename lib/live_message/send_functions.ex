@@ -1,4 +1,8 @@
 defmodule LiveMessage.SendFunctions do
+  @moduledoc ~S"""
+  The `send_info/2` and `send_info_after/3` functions that are imported into all LiveViews and LiveComponents
+  """
+
   alias Phoenix.LiveView
   alias LiveMessage.Id.LiveViewId
   alias LiveMessage.Id.LiveComponentId
