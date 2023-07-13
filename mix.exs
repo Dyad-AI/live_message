@@ -8,13 +8,13 @@ defmodule LiveMessage.MixProject do
   def project do
     [
       app: :live_message,
-      version: "0.1.1",
+      version: "0.1.2",
       elixir: "~> 1.14",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
       package: package(),
       description: @description,
-      docs: [extras: ["README.md"]]
+      docs: [extras: ["README.md"], main: "readme"]
     ]
   end
 
