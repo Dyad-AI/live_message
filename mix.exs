@@ -19,7 +19,8 @@ defmodule LiveMessage.MixProject do
 
   defp deps do
     [
-      {:phoenix_live_view, "~> 0.18.3"}
+      {:phoenix_live_view, "~> 0.18.3"},
+      {:floki, ">= 0.30.0", only: :test}
     ]
   end
 end

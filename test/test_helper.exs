@@ -1,26 +1,11 @@
 ExUnit.start()
 
-defmodule LiveMessageTest.PageLive do
-  use Phoenix.LiveView
-  use LiveMessage.LiveView
-
-  def render(assigns) do
-    ~H"""
-    Hi
-    """
-  end
-end
-
 defmodule LiveMessageTest.Router do
   use Phoenix.Router
   import Phoenix.LiveView.Router
 
   pipeline :browser do
     plug(:fetch_session)
-  end
-
-  scope "/" do
-    live "/", LiveMessageTest.PageLive
   end
 end
 
