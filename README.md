@@ -1,4 +1,4 @@
-![Tests](https://github.com/Dyad-AI/live_message/actions/workflows/tests.yml/badge.svg)
+![Tests](https://github.com/Dyad-AI/live_message/actions/workflows/tests.yml/badge.svg) [![Hex.pm](https://img.shields.io/hexpm/v/live_message.svg)](https://hex.pm/packages/live_message) [![Documentation](https://img.shields.io/badge/documentation-gray)](https://hexdocs.pm/live_message/)
 
 # LiveMessage
 
@@ -69,9 +69,3 @@ def live_component do
   end
 end
 ```
-
-## Documentation
-
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at <https://hexdocs.pm/live_message>.
