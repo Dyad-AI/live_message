@@ -2,7 +2,7 @@
 
 # LiveMessage
 
-Add unified messaging for LiveViews and LiveComponents, to allow for simple decomposition of LiveViews into LiveComponents.
+Unified messaging for LiveViews and LiveComponents, to allow for simple decomposition of LiveViews into LiveComponents.
 
 ## Usage
 
