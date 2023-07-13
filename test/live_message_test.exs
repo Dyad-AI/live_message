@@ -1,5 +1,4 @@
 defmodule LiveMessageTest do
-  alias Phoenix.LiveComponent
   use ExUnit.Case, async: false
 
   import Phoenix.ConnTest
