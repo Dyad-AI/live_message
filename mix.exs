@@ -5,7 +5,7 @@ defmodule LiveMessage.MixProject do
   Unified messaging for LiveViews and LiveComponents
   """
 
-  @version "0.1.10"
+  @version "0.1.11"
 
   def project do
     [
