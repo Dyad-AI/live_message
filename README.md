@@ -43,11 +43,15 @@ Think of `@me` like `@myself` but for live messaging.
 LiveComponents are a great way to break up large LiveViews into smaller reusable components. But what happens when your LiveComponents
 get too big? You could break them down into smaller components, but this comes with  a couple of issues:
 
-- LiveComponents end up needing to know what their parents are
-- The syntax for LiveComponent message handling is coupled to initialisation
+- LiveComponents get coupled to their parent
+- LiveComponent message handling is coupled to initialisation
+
+# LiveComponents get coupled to their parent
 
 In order for a LiveComponent to communicate to it's parent, it needs to send messages. If it's parent is a LiveView you need `send/2`,
 but if it's parent is a LiveComponent you need `LiveView.send_update/2`. So a component needs to know what it's parent is and handle that variation.
+
+# LiveComponent message handling is coupled to initialisation
 
 To send a message to a LiveComponent you use `LiveView.send_update/2` and this is handled in the `update/2` function. Typically `update/2`
 is used to set the assigns for the LiveComponent, so for it to also be the message handling function feels like these concerns have not been properly separated:
@@ -64,6 +68,8 @@ def update(assigns, socket) do
   {:ok, socket}
 end
 ```
+
+# The solution
 
 LiveMessage solves both these issues by providing a unified way to message LiveViews and LiveComponents that both use `handle_info/2` to handle the messages.
 
