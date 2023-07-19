@@ -80,7 +80,7 @@ The package can be installed by adding `live_message` to your list of dependenci
 ```elixir
 def deps do
   [
-    {:live_message, "~> 0.1.0"}
+    {:live_message, "~> 0.1.12"}
   ]
 end
 ```

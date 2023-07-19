@@ -5,7 +5,7 @@ defmodule LiveMessage.MixProject do
   Unified messaging for LiveViews and LiveComponents
   """
 
-  @version "0.1.11"
+  @version "0.1.12"
 
   def project do
     [
@@ -28,7 +28,7 @@ defmodule LiveMessage.MixProject do
 
   defp deps do
     [
-      {:phoenix_live_view, "~> 0.18.3"},
+      {:phoenix_live_view, "~> 0.18"},
       {:ex_doc, "~> 0.27", only: :dev, runtime: false},
       {:floki, ">= 0.30.0", only: :test}
     ]
